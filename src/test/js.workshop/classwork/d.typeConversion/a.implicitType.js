@@ -1,0 +1,61 @@
+/*
+Example 1:
+Number to String Conversion.
+In this example, we are adding numbers with strings and so on.
+The Number 10 is converted to string '10' and then '+' concatenates both strings.
+ */
+let x = 10 + '20';
+let y = '20' + 10;
+
+// The Boolean value true is converted to string 'true' and then '+' concatenates both the strings.
+let z = true + '10';
+
+console.log(x);
+console.log(y);
+console.log(z);
+
+/*
+Example 2:
+String to Number Conversion.
+In this example, we are converting string to number implicitly.
+The string '5' is converted to number 5 in all cases implicitly.
+ */
+let a = 10 - '5';
+let b = 10 * '5';
+let c = 10 / '5';
+let d = 10 % '5';
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+
+/*
+Example 3:
+In this example, we are converting Boolean to number implicitly.
+The Boolean value true is converted to number 1 and then operation is performed.
+ */
+let e = true + 2;
+
+// The Boolean value false is converted to number 0 and then operation is performed.
+let f = false + 2;
+
+console.log(e);
+console.log(f);
+
+/*
+Example 4:
+In this example, we are using == operator for checking the type of the values.
+ */
+// Should output 'true' as string '10' is coerced to number 10.
+let g = (10 == '10');
+
+// Should output 'true', as boolean true is coerced to number 1.
+let h = (true == 1);
+
+// Should output 'false' as string 'true' is coerced to NaN which is not equal to 1 of Boolean true.
+let i = (true == 'true');
+
+console.log(g);
+console.log(h);
+console.log(i);
