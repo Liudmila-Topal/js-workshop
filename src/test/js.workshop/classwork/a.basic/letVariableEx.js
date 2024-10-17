@@ -22,7 +22,7 @@ function fun() {
 
 fun();
 
-console.log(num2);
+// console.log(num2); //illegal
 
 /*
 Example 3:
@@ -47,6 +47,6 @@ let x = 99;
     console.log(x);
 }
 
-let x = 55; // illegal
+//let x = 55; // illegal
 
 console.log(x);

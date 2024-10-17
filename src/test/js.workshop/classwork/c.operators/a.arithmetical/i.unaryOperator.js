@@ -5,8 +5,9 @@ This example shows the use of the JavaScript Unary plus(+) Operator. It converts
 const x = "10";
 let y;
 y = +x;
+console.log(`Type of 'x' is`, typeof x);
 console.log(y);
-console.log(typeof y);
+console.log(`Type of 'y' is`, typeof y);
 
 /*
 Example 2:
@@ -27,11 +28,7 @@ The following example demonstrates a unary method with non-numbers.
 const e = true;
 const f = false;
 const g = null;
-const h = function (x) {
-    return x
-};
 
 console.log(+e);
 console.log(+f);
 console.log(+g);
-console.log(+h);

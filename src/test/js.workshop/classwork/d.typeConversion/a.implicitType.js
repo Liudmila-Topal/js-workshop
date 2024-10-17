@@ -10,9 +10,9 @@ let y = '20' + 10;
 // The Boolean value true is converted to string 'true' and then '+' concatenates both the strings.
 let z = true + '10';
 
-console.log(x);
-console.log(y);
-console.log(z);
+console.log(`Type of '${x}' is`, typeof x);
+console.log(`Type of '${y}' is`, typeof y);
+console.log(`Type of '${z}' is`, typeof z);
 
 /*
 Example 2:
@@ -25,10 +25,10 @@ let b = 10 * '5';
 let c = 10 / '5';
 let d = 10 % '5';
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
+console.log(`Type of '${a}' is`, typeof a);
+console.log(`Type of '${b}' is`, typeof b);
+console.log(`Type of '${c}' is`, typeof c);
+console.log(`Type of '${d}' is`, typeof d);
 
 /*
 Example 3:
@@ -40,8 +40,8 @@ let e = true + 2;
 // The Boolean value false is converted to number 0 and then operation is performed.
 let f = false + 2;
 
-console.log(e);
-console.log(f);
+console.log(`Type of '${e}' is`, typeof e);
+console.log(`Type of '${f}' is`, typeof f);
 
 /*
 Example 4:
@@ -56,6 +56,6 @@ let h = (true == 1);
 // Should output 'false' as string 'true' is coerced to NaN which is not equal to 1 of Boolean true.
 let i = (true == 'true');
 
-console.log(g);
-console.log(h);
-console.log(i);
+console.log(`Type of '${g}' is`, typeof g);
+console.log(`Type of '${h}' is`, typeof h);
+console.log(`Type of '${i}' is`, typeof i);

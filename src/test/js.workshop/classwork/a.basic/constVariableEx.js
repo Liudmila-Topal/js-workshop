@@ -30,11 +30,11 @@ It describes the const variable which contains the Block Scope.
 //     console.log(a);
 //
 //     {
-//         const x = 77;
+//         const a = 77;
 //         console.log(a);
 //     }
 //     {
-//         const x = 45;
+//         const a = 45;
 //         console.log(a);
 //     }
 // }
@@ -51,7 +51,7 @@ It describes the const variable and assigned it after declaration.
 /*
 Example 5:
 Cannot be Hoisted
-It describes the const variable cannot be Hoisted.
+It describes the const variable cannot be Hoisted (Hoisting is JavaScript's default behavior of moving declarations to the top).
  */
 // c = 3;
 // console.log(c);
