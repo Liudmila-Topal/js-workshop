@@ -3,17 +3,17 @@
 1. **Write a Function to Add Two Numbers**
 - Write a function `add(a, b)` that takes two arguments and returns their sum.
 - **Example**: `add(3, 5)` should return `8`.\
-Answer: **[Click here for answer]()**
+Answer: **[Click here for answer](https://github.com/Liudmila-Topal/js-workshop/blob/master/src/test/js.workshop/homework/h.functions/answers.md#1)**
 
 2. **Create a Function to Check If a Number is Even or Odd**
 - Write a function `isEven(num)` that returns `true` if the number is even, and `false` if it’s odd.
 - **Example**: `isEven(4)` should return `true`, `isEven(5)` should return `false`.\
-  Answer: **[Click here for answer]()**
+  Answer: **[Click here for answer](https://github.com/Liudmila-Topal/js-workshop/blob/master/src/test/js.workshop/homework/h.functions/answers.md#2)**
 
 3. **Function to Calculate Factorial**
 - Write a function `factorial(n)` that returns the factorial of a given positive integer. If given number is negative, return it's value.
 - **Example**: `factorial(5)` should return `120`, `factorial(-5)` should return `-5`.\
-Answer: **[Click here for answer]()**
+Answer: **[Click here for answer](https://github.com/Liudmila-Topal/js-workshop/blob/master/src/test/js.workshop/homework/h.functions/answers.md#3)**
 
 4. **Convert Celsius to Fahrenheit**
 - Write a function `toFahrenheit(celsius)` that converts Celsius to Fahrenheit. To convert Celsius to Fahrenheit, we use the C to F formula which is `°F = (9/5) °C + 32`. Substitute the value of given temperature in Celsius in this and get the value in Fahrenheit.
