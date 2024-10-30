@@ -13,7 +13,15 @@ function createCounter() {
         }
     };
 }
-
+/*
+createCounter Function:
+ - Defines a private count variable initialized to 0.
+Returned Object:
+ - increment Method: Increments count by 1 each time it’s called.
+ - getValue Method: Returns the current value of count.
+ - decrement Method: Decrements count by 1 each time it’s called.
+Each call to createCounter creates a new counter with its own independent count variable.
+ */
 const counter1 = createCounter();
 counter1.increment(); // Counter is now 1
 counter1.increment(); // Counter is now 2
