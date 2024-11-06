@@ -14,13 +14,9 @@ Write your code below this line.
 
 /*
 Exercise 2:
-Given a number, check if it’s even and not a negative number.
+- Given a number, check if it’s even and not a negative number.
  */
 
-let number = 5;
-let isEvenAndNonNegative = (number % 2 === 0) && (number >= 0);
-
-console.log(`Is the number '${number}' even and non-negative?`, isEvenAndNonNegative);
 
 /*
 Exercise 3:
@@ -28,11 +24,6 @@ Check if Two Strings are Equal.
 - Declare two strings and compare them using comparison operators.
  */
 
-let string1 = "Hello";
-let string2 = "World";
-let areEqual = string1 === string2;
-
-console.log("Are the two strings equal?", areEqual);
 
 /*
 Exercise 4:
@@ -41,7 +32,3 @@ Given three grades:
 - Calculate the average of them.
 - Determine if the student passes (average ≥ 60).
  */
-
-let grade1 = 75;
-let grade2 = 85;
-let grade3 = 90;
