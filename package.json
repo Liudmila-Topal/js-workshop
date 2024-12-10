@@ -1,0 +1,21 @@
+{
+  "name": "js-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Liudmila-Topal/js-workshop.git"
+  },
+  "private": true,
+  "dependencies": {
+    "@jest/globals": "^29.7.0",
+    "log4js": "^6.9.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
