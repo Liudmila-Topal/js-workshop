@@ -23,27 +23,16 @@ test('should filter even numbers from an array', () => {
 
 test('should map an array to its square values', () => {
     // TODO: Create an anonymous function which map an array to its square values
-    const squareValues = function(numbers) {
-        return numbers.map(num => num * num);
-    };
+
     expect(squareValues([1, 2, 3])).toEqual([1, 4, 9]);
     expect(squareValues([-1, 0, 2])).toEqual([1, 0, 4]);
 });
 
 test('should reduce an array to its sum', () => {
     // TODO: Create an anonymous function which reduce an array to its sum
-    const sumArray = function(numbers) {
-        return numbers.reduce((acc, num) => acc + num, 0);
-    };
+
     expect(sumArray([1, 2, 3])).toBe(6);
     expect(sumArray([-1, -2, -3])).toBe(-6);
 });
 
 // TODO: add a test where an anonymous function should return reversed string
-test('should return reversed string', () => {
-    const reverseString = function(str) {
-        return str.split('').reverse().join('');
-    };
-    expect(reverseString('hello')).toBe('olleh');
-    expect(reverseString('world')).toBe('dlrow');
-});

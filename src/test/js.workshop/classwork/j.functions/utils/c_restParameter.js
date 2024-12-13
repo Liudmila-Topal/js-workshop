@@ -15,8 +15,5 @@ function sumAll(...numbers) {
     return numbers.reduce((total, num) => total + num, 0);
 }
 // TODO: Create a function with filtering out specific values using a rest parameter
-function filterOut(filterValue, ...values) {
-    return values.filter(value => value !== filterValue);
-}
 
 module.exports = { concatenate, sumAll };

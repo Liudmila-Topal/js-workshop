@@ -1,4 +1,4 @@
-// TODO: Add new functions division and subtraction in 'const'
+// TODO: Add in import a new functions division and subtraction in 'const'
 const {add, multiply} = require('../utils/a_mathFunctions.js');
 
 const log4js = require("log4js");
@@ -6,6 +6,7 @@ const logger = log4js.getLogger();
 logger.level = "info";
 
 test('should correctly add two numbers', () => {
+    // const result - result of add function
     const result = add(3, 7); // 3, 7 - arguments of function
     expect(result).toBe(10);
 

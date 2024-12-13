@@ -22,20 +22,8 @@ test('should filter and format messages by a keyword', () => {
     manager.addMessage('Goodbye World');
 
     // TODO: Call getMessagesByKeyword() with parameter
-    const filteredMessages = manager.getMessagesByKeyword('Hello');
 
     // TODO: Check that massages were filtered
-    expect(filteredMessages).toEqual([
-        'Filtered: Hello World',
-        'Filtered: Hello Jest'
-    ]);
 });
 
 // TODO: Add a test which should return an empty array if no messages match the keyword
-test('should return an empty array if no messages match the keyword', () => {
-    manager.addMessage('Goodbye World');
-
-    const filteredMessages = manager.getMessagesByKeyword('Hello');
-
-    expect(filteredMessages).toEqual([]);
-});

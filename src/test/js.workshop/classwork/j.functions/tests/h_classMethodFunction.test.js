@@ -26,26 +26,12 @@ test('should return all books in the library', () => {
 
 test('should find a book by title', () => {
     // TODO: Add a new book
-    library.addBook('Moby Dick');
-    // TODO: Find the book using findBook()
-    expect(library.findBook('Moby Dick')).toBe(true);
-    expect(library.findBook('Invisible Man')).toBe(false);
+
+    // TODO: Find the book using findBook() and assert
 });
 
 // TODO: Add test for new created removeBook() method
-test('should remove a book from the library', () => {
-    library.addBook('The Catcher in the Rye');
-    library.removeBook('The Catcher in the Rye');
-    expect(library.getAllBooks()).not.toContain('The Catcher in the Rye');
-});
 
 // TODO: Add test where removeBook() should throw an error when trying to remove a non-existent book
-test('should throw an error when trying to remove a non-existent book', () => {
-    expect(() => library.removeBook('Non-Existent Book')).toThrow('Book not found');
-});
 
 // TODO: Add test where addBook() should throw an error when adding an invalid book title
-test('should throw an error when adding an invalid book title', () => {
-    expect(() => library.addBook(123)).toThrow('Invalid book title');
-    expect(() => library.addBook('')).toThrow('Invalid book title');
-});

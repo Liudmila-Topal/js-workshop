@@ -46,14 +46,6 @@ class Library {
     Start at the position 'index'.
     Remove exactly 1 element.
      */
-    removeBook(title) {
-        const index = this.books.indexOf(title);
-        if (index > -1) {
-            this.books.splice(index, 1);
-        } else {
-            throw new Error('Book not found');
-        }
-    }
 }
 
 module.exports = Library;

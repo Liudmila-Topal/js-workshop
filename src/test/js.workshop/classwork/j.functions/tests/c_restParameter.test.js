@@ -33,8 +33,3 @@ test('sumAll should return the sum of all arguments', () => {
 });
 
 // TODO: add a test where filterOut() should remove all occurrences of the filterValue
-test('filterOut should remove all occurrences of the filterValue', () => {
-    expect(filterOut(2, 1, 2, 3, 2, 4)).toEqual([1, 3, 4]);
-    expect(filterOut('a', 'a', 'b', 'c', 'a', 'd')).toEqual(['b', 'c', 'd']);
-    expect(filterOut(true, true, false, true)).toEqual([false]);
-});
