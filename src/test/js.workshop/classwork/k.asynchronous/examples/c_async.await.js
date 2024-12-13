@@ -29,7 +29,14 @@ async function handleData() {
 }
 
 // Call the async function
-handleData();
+handleData()
+    .then(() => {
+        console.log("Data handling completed successfully.");
+    })
+    .catch((error) => {
+        console.error("An error occurred during data handling:", error);
+    });
+
 
 /*
 Explanation:
