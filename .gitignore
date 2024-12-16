@@ -8,3 +8,8 @@ workspace.xml
 /dataSources.local.xml
 
 !**/src/**
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
