@@ -1,18 +1,18 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const {souceDemoPage} = require("./pageobjects/saucedemoPO");
+const {sauceDemoPage} = require("./pageobjects/SauceDemoPage");
 
 test('first test', async ({ page }) => {
-    await page.goto(souceDemoPage.webPage);
-    await page.getByPlaceholder(souceDemoPage.userNamePlaceHolder).fill('standard_user');
-    await page.getByTestId(souceDemoPage.passwordFieldTestId).fill('secret_sauce');
-    await page.locator(souceDemoPage.logInButtonClass).click()
+    await page.goto(sauceDemoPage.webPage);
+    await page.getByPlaceholder(sauceDemoPage.userNamePlaceHolder).fill('standard_user');
+    await page.getByTestId(sauceDemoPage.passwordFieldTestId).fill('secret_sauce');
+    await page.locator(sauceDemoPage.logInButtonClass).click()
     await page.getByText('Sauce Labs Backpack').click();
-    await page.getByTestId(souceDemoPage.addToCartButtonTestId).click()
-    await page.getByTestId(souceDemoPage.shoppingCardTestId).click()
-    await page.getByTestId(souceDemoPage.checkOutButtonTestId).click()
-    await page.getByTestId(souceDemoPage.continueButtonTestId).click()
-    const errorMessage = page.getByTestId(souceDemoPage.errorMessageTestId);
+    await page.getByTestId(sauceDemoPage.addToCartButtonTestId).click()
+    await page.getByTestId(sauceDemoPage.shoppingCardTestId).click()
+    await page.getByTestId(sauceDemoPage.checkOutButtonTestId).click()
+    await page.getByTestId(sauceDemoPage.continueButtonTestId).click()
+    const errorMessage = page.getByTestId(sauceDemoPage.errorMessageTestId);
     await errorMessage.highlight()
     await expect(errorMessage).toBeVisible();
 });

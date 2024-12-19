@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 //get by role the username element
 test('get by role', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
-    const locator =
+    const locator = await page.getByRole('textbox', { name: 'Username' })
     await locator.highlight()
     await expect(locator).toBeVisible();
 });
@@ -12,7 +12,7 @@ test('get by role', async ({ page }) => {
 //get by text the page header text
 test('get by text', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
-    const locator =
+    const locator = await page.getByText('Swag Labs')
     await locator.highlight()
     await expect(locator).toBeVisible();
 });
@@ -20,7 +20,7 @@ test('get by text', async ({ page }) => {
 //get by label the search textbox from the header of the page
 test('get by label', async ({ page }) => {
     await page.goto('https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label');
-    const locator =
+    const locator = await page.getByLabel('Search MDN').first()
     await locator.highlight()
     await locator.click()
     await locator.fill("Ha ha ha ")
@@ -30,7 +30,6 @@ test('get by label', async ({ page }) => {
 //get by placeholder the username textbox
 test('get by placeholder', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
-    const locator =
     await locator.highlight()
     await expect(locator).toBeVisible();
 });
@@ -38,7 +37,7 @@ test('get by placeholder', async ({ page }) => {
 //get by testId the username textbox
 test('get by testId', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
-    const locator =
+    const locator = await page.getByTestId('username')
     await locator.highlight()
     await expect(locator).toBeVisible();
 });
