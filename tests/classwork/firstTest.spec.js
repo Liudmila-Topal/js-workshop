@@ -1,23 +1,37 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
-const {sauceDemoPage} = require("./pageobjects/SauceDemoPage");
+import { test as base, expect } from '@playwright/test';
+const { SauceDemoPage } = require('../pageobjects/sauceDemoPage');
+
+// Extend basic test with a custom fixture
+const test = base.extend({
+    sauceDemoPage: async ({ page }, use) => {
+        const sauceDemoPage = new SauceDemoPage(page);
+        await sauceDemoPage.goTo();
+        await sauceDemoPage.logIn('standard_user', 'secret_sauce');
+        await use(sauceDemoPage); // Pass the instance for use in tests
+        await sauceDemoPage.checkoutCart();
+        await sauceDemoPage.validateErrorMessageShown();
+    }
+})
 
 test('first test', async ({ page }) => {
-    await page.goto(sauceDemoPage.webPage);
-    await page.getByPlaceholder(sauceDemoPage.userNamePlaceHolder).fill('standard_user');
-    await page.getByTestId(sauceDemoPage.passwordFieldTestId).fill('secret_sauce');
-    await page.locator(sauceDemoPage.logInButtonClass).click()
-    await page.getByText('Sauce Labs Backpack').click();
-    await page.getByTestId(sauceDemoPage.addToCartButtonTestId).click()
-    await page.getByTestId(sauceDemoPage.shoppingCardTestId).click()
-    await page.getByTestId(sauceDemoPage.checkOutButtonTestId).click()
-    await page.getByTestId(sauceDemoPage.continueButtonTestId).click()
-    const errorMessage = page.getByTestId(sauceDemoPage.errorMessageTestId);
-    await errorMessage.highlight()
-    await expect(errorMessage).toBeVisible();
+    const sauceDemoPage = new SauceDemoPage(page);
+    await sauceDemoPage.goTo();
+    await sauceDemoPage.logIn('standard_user', 'secret_sauce');
+    await sauceDemoPage.addToCart('Sauce Labs Backpack');
+    await sauceDemoPage.checkoutCart();
+    await sauceDemoPage.validateErrorMessageShown();
 });
 
-test('synchrony', async ({ page }) => {
+test('second test', async ({ sauceDemoPage }) => {
+    await sauceDemoPage.addToCart('Sauce Labs Bike Light');
+});
+
+test('third test', async ({ sauceDemoPage }) => {
+    await sauceDemoPage.addToCart('Sauce Labs Bolt T-Shirt');
+});
+
+test('synchrony', async ({page}) => {
     await page.goto('https://the-internet.herokuapp.com/checkboxes');
     let checkboxLocator = page.getByRole('checkbox').first()
     await checkboxLocator.highlight()
@@ -25,7 +39,7 @@ test('synchrony', async ({ page }) => {
     await expect(checkboxLocator).toBeChecked()
 });
 
-test('A-synchrony', async ({ page }) => {
+test('A-synchrony', async ({page}) => {
     await page.goto('https://the-internet.herokuapp.com/checkboxes');
     let checkboxLocator = page.getByRole('checkbox').first()
     await checkboxLocator.highlight()

@@ -1,6 +1,6 @@
 // @ts-check
 const {test, expect} = require('@playwright/test');
-const {sauceDemoPage} = require("./pageobjects/SauceDemoPage");
+const {sauceDemoPage} = require("../pageobjects/sauceDemoPage");
 
 //Using page object souceDemoPage.userNamePlaceHolder validate it is attached
 test('assert to be attached', async ({page}) => {
