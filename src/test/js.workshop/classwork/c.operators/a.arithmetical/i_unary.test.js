@@ -9,6 +9,7 @@ test("Unary plus operator with a string", () => {
     logger.info(`Type of 'x' is`, typeof x);
     logger.info(y);
     logger.info(`Type of 'y' is`, typeof y);
+    logger.info(x + y);
 });
 
 test("Unary plus operator with numbers", () => {

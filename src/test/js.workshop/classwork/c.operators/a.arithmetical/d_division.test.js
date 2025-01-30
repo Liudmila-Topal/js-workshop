@@ -1,6 +1,6 @@
 const log4js = require("log4js");
-const info = log4js.getLogger();
-info.level = "info";
+const logger = log4js.getLogger();
+logger.level = "info";
 
 test("Basic division on numbers", () => {
     // Divide two numbers

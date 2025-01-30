@@ -28,5 +28,7 @@ test("Equality operator with Date and String", () => {
     let i = new Date();
     let j = i.toString();
 
+    logger.info(i);
+    logger.info(j);
     logger.info(i == j);
 });
