@@ -36,6 +36,10 @@ Test for redeclaring a variable in the same global block
 test("Redeclare a variable in the same global block", () => {
     var test5 = 99;
     var test5 = 999; // No error occurs
+
+    // let testLet = 99;
+    // let testLet = 999; // not allowed
+
     logger.info(test5); // Logs: 999
 });
 

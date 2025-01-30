@@ -60,7 +60,7 @@ test("map(), filter(), find(), reduce() methods", () => {
     logger.info(`After using the 'find' method, the first found element of array is '${foundElement}'`);
 
     const sum = squares.reduce((total, num) => total + num);
-    logger.info(`After using the 'reduce' method, the array looks like this: ${sum}`);
+    logger.info(`After using the 'reduce' method, the result looks like this: ${sum}`);
 });
 
 test("every(), some(), reverse() methods", () => {

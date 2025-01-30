@@ -37,7 +37,7 @@ test("Object Methods", () => {
         color: "red",
     };
 
-    const fullCar = Object.assign({}, car, additionalInfo);
+    const fullCar = Object.assign(car, additionalInfo);
     logger.info(fullCar);
 });
 

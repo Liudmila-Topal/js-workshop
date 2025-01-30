@@ -72,7 +72,8 @@ test("Const in objects allows modification of properties, not reference", () => 
         About: "American animator, director, producer, writer and illustrator",
     };
 
-    logger.info(`Original object is: ${person}`);
+    logger.info(`Original object is:`);
+    logger.info(person);
 
     // Modifying properties is allowed
     person.first_name = "Stephen";
@@ -80,7 +81,8 @@ test("Const in objects allows modification of properties, not reference", () => 
     person.Age = 77;
     person.About = "American author";
 
-    logger.info(`Changed object is: ${person}`);
+    logger.info(`Changed object is:`);
+    logger.info(person);
 
     // Reassigning the object itself is not allowed
     // Uncomment to see an error
